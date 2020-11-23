@@ -9,7 +9,8 @@
 
 ## **2) Abstract**
 
-While the paper explores the predictive accuracy of Random Forest, we propose to study a more recent alternative to Random Forest: Boosted Decision Trees. The motivation behind this project is to explore through application what has been seen in class concerning Random Forest VS Boosted Decision Trees (lecture 7, slides 55-58). Furthermore, according to some researchs on the web, Gradient Boosting performs well on unbalanced data (ex: real time risk assessment) whereas Random Forest performs well on multi-class problems having a lot of statistical noise.
+While the paper explores the predictive accuracy of Random Forest, we propose to study a more recent alternative to Random Forest: Boosted Decision Trees. The motivation behind this project is to explore through application what has been seen in class concerning Random Forest VS Boosted Decision Trees (lecture 7, slides 55-58). Furthermore, according to Brown, I., & Mues, C. (2012). An experimental comparison of classification algorithms for imbalanced credit scoring data sets., Gradient Boosting performs well on unbalanced data (in their case, credit scoring).
+
 As a result, we would like to extend the analysis from the paper by implementing this new method (which might also consolidates the results found by the researchers concerning the variables importance in Civil War Onset). The story we would like to investigate is whether Boosted Decision Trees handles this Class-Imbalanced Civil War Onset Data better and to offer a new way to better predict these destructive events.
 
 
