@@ -5,7 +5,7 @@
 
 ## **2) Abstract**
 
-In similar fashion as Muchlinski et al., 2016, our paper aims to contribute to the insofar discarded predictive statistical methods in political science, in favor of accurately predicting significant events such as civil wars. To this end, Muchlinski et al., 2016's approach of comparing experimental performance of algorithmic maneuveurs via a multitude of metrics is adopted. However, in contrast with only using Random Forest,  we attempt in our paper to  explore and implement other methods through rigorous incorporation of stacking, boosting, and a variety of classification algorithms, which benefit an extended, deepened comparison and discussion surrounding not only this imbalanced prediction task, but also the causal estimation of features. While indeed from Muchlinski et al., 2016, it seems that Random Forests drastically outperform their determined competitor in all metrics employed, nuance of their strengths and weaknesses in contrast with more suited models remains uninvestigated, providing justification for extending this analysis. 
+In similar fashion as Muchlinski et al., 2016, our paper aims to contribute to the insofar discarded predictive statistical methods in political science, in favor of accurately predicting significant events such as civil wars. To this end, Muchlinski et al., 2016's approach of comparing experimental performance of algorithmic maneuveurs via a multitude of metrics is adopted. However, in contrast with only using Random Forest,  we attempt in our paper to  explore and implement other methods through rigorous incorporation of boosting, and a variety of classification algorithms, which benefit an extended, deepened comparison and discussion surrounding not only this imbalanced prediction task, but also the causal estimation of features. While indeed from Muchlinski et al., 2016, it seems that Random Forests drastically outperform their determined competitor in all metrics employed, nuance of their strengths and weaknesses in contrast with more suited models remains uninvestigated, providing justification for extending this analysis. 
 
 ## **3) Research Questions**
 
@@ -19,7 +19,7 @@ The dataset employed remains, for comparative purposes, the Civil War Data emplo
 
 ## **5) Methods**
 
-Annually measured Civil War Data, with {0,1} labels on the dependent dummy variable, indicating if a civil war outbreak took place, is provided by Hegre and Sambanis, 2006. Therein, is provided 7141 observations, with eighty-eight predictor variables. First, feature selection using .. is 
+Annually measured Civil War Data, with {0,1} labels on the dependent dummy variable, indicating if a civil war outbreak took place, is provided by Hegre and Sambanis, 2006. Therein, is provided 7141 observations, with eighty-eight predictor variables. First, feature selection using t-sne and some experiments with online feature selection methods. Boosted trees, SVM and Neural networks achieve great results in a variaty of use cases and have the potential to outperform Random Forests on this classification task.
 
 
 
