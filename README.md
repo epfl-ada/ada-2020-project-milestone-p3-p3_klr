@@ -29,7 +29,7 @@ The project is due for December 18th, giving us 3 weeks to complete the work. Th
 
 - **December 7th**: Implement the statistical methods' computations and report graphs / results 
 - **December 11th**: Clean up the code
-- **December 18th**: Prepare the report and the short presentation movie
+- **December 18th**: Prepare the report and the short movie presentation
 
 ## **7) Questions for TAs (optional)**
 
