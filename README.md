@@ -19,8 +19,9 @@ The dataset employed remains, for comparative purposes, the Civil War Data emplo
 
 ## **5) Methods**
 
-Annually measured Civil War Data, with labels on the dependent variable, $Y_{cw}^{ij}$, which is a dummy variable of
-whether a civil war onset occurred for a given country, i, in a given year j, is provided by Hegre and Sambanis, 2006. Therein, is provided 7141 observations, with eighty-eight predictor variables. ...
+Annually measured Civil War Data, with {0,1} labels on the dependent dummy variable, indicating if a civil war outbreak took place, is provided by Hegre and Sambanis, 2006. Therein, is provided 7141 observations, with eighty-eight predictor variables. First, feature selection using .. is 
+
+
 
 ## **6) Proposed timeline**
 
