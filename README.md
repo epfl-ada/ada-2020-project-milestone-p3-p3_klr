@@ -33,5 +33,6 @@ The project is due for December 18th, giving us 3 weeks to complete the work. Th
 
 ## **7) Questions for TAs (optional)**
 
-- Libraries to use?
-- Heuristics?
+- Should we use other other metrics than the ones from the original paper?
+- Are the 3 methods that we intend to implement enough for the scope of this project?
+- Is AdaBoost a better choice for boosted trees since it is the most popular?
