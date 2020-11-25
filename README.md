@@ -9,9 +9,9 @@ In similar fashion as Muchlinski et al., 2016, this paper aims to contribute to 
 
 ## **3) Research Questions**
 
-- Do different models determine different variables to be most predictive? 
-- Do these findings agree with the features commonly believed to be most influential (or causal) in predicting a Civil War that are discussed in Muchlinski et al., 2016? If not, why? (Enhance understanding of Civil War Onsets, and of statistical methods) 
-- How do better suited models handle this class imbalance? (Improving prediction ability of these destructive events and understanding of statistical methods)
+- Do different models determine different variables to be most predictive? (Consolidate previous findings)
+- Do these findings agree with the features commonly believed to be most influential in predicting a Civil War that are discussed in Muchlinski et al., 2016? If not, why? (Enhance understanding of Civil War Onsets, and of statistical methods) 
+- How do better suited models handle this class imbalance? (Improving prediction ability of these destructive events and the understanding of specific statistical methods)
 
 ## **4) Proposed dataset**
 
@@ -19,8 +19,8 @@ The dataset employed remains, for comparative purposes, the Civil War Data emplo
 
 ## **5) Methods**
 
-Civil War Data 
-
+Annually measured Civil War Data, with labels on the dependent variable, $Y_{cw}^{ij}$, which is a dummy variable of
+whether a civil war onset occurred for a given country, i, in a given year j, is provided by Hegre and Sambanis, 2006. Therein, is provided 7141 observations, with eighty-eight predictor variables. ...
 
 ## **6) Proposed timeline**
 
