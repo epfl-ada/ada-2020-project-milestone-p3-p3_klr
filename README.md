@@ -1,6 +1,6 @@
 # **Milestone P3: Team KLR**
 
-## **1) Title** : Extending the comparison of classification algorithms' ability to predict imbalanced civil war data
+## **1) Title** : Extending the comparison of classification algorithms' ability to predict a civil war onset on an imbalanced dataset
 
 
 ## **2) Abstract**
