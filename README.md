@@ -19,7 +19,7 @@ The dataset employed remains, for comparative purposes, the Civil War Data emplo
 
 ## **5) Methods**
 
-Annually measured Civil War Data, with {0,1} labels on the dependent dummy variable, indicating if a civil war outbreak took place, is provided by Hegre and Sambanis, 2006. Therein, is provided 7141 observations, with eighty-eight predictor variables. Feature selection methods such as T-sne, online and offline feature selection methods are combined with Boosted trees, Support Vector Machines and Neural networks in order to compare these feature selection methods, and to leverage full ability from these models to handle larger or smaller feature dimensionalities in order to compare and discuss their predictive strengths and shortcomings. 
+Annually measured Civil War Data, with {0,1} labels on the dependent dummy variable, indicating if a civil war outbreak took place, is provided by Hegre and Sambanis, 2006. Therein, is provided 7141 observations, with eighty-eight predictor variables. Online and offline eature selection methods are combined with Boosted trees, Support Vector Machines and Neural networks in order to compare these feature selection methods, and to leverage full ability from these models to handle larger or smaller feature dimensionalities in order to compare and discuss their predictive strengths and shortcomings. 
 
 ## **6) Proposed timeline**
 
