@@ -31,7 +31,7 @@ The project is due for December 18th, giving us 3 weeks to complete the work. Th
 
 ## **7) Organization within the team**
 
-- **December 7th**: Implementation of the statistical methods' (SVM: Kamran, NN: Razvan, Boosted Trees: Loic). Feature selection will be implemented together and combined with the models once the models are set up to handle it, again each responsible for its incorporation into their method. Preparation of report graphs / results - each responsible for curating data from their statistical method in suitable format for the combined graphs (Roc-Auc curve, and F1 scores as in the original paper)
+- **December 7th**: Implementation of the statistical methods' (SVM: Kamran, NN: Razvan, Boosted Trees: Loic). Feature selection will be implemented together and combined with the models once the models are set up to handle it, again each responsible for its incorporation into their method. Preparation of report graphs / results - each responsible for curating data from their statistical method in suitable format for the combined graphs (Roc-Auc curve, and F1 scores as in the original paper to preserve comparability. Incorporation of the previous methods too (Kamran) in order to also add comparability with our approach of incorporating feature selection)
 - **December 11th**: Clean up the code (Razvan mostly)
 - **December 18th**: Report and presentation, incorporating the previously prepared results (Loic and Kamran mostly)
 
