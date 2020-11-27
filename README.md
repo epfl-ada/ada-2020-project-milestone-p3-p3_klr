@@ -19,9 +19,7 @@ The dataset employed remains, for comparative purposes, the Civil War Data emplo
 
 ## **5) Methods**
 
-Annually measured Civil War Data, with {0,1} labels on the dependent dummy variable, indicating if a civil war outbreak took place, is provided by Hegre and Sambanis, 2006. Therein, is provided 7141 observations, with eighty-eight predictor variables. First, feature selection using t-sne and some experiments with online feature selection methods. Boosted trees, SVM and Neural networks achieve great results in a variaty of use cases and have the potential to outperform Random Forests on this classification task.
-
-
+Annually measured Civil War Data, with {0,1} labels on the dependent dummy variable, indicating if a civil war outbreak took place, is provided by Hegre and Sambanis, 2006. Therein, is provided 7141 observations, with eighty-eight predictor variables. Feature selection methods such as T-sne, online and offline feature selection methods are combined with Boosted trees, Support Vector Machines and Neural networks in order to compare both these feature selection methods, and to leverage full ability from these models to handle larger or smaller feature dimensionalities in order to compare and discuss their predictive strengths and shortcomings. 
 
 ## **6) Proposed timeline**
 
@@ -33,6 +31,6 @@ The project is due for December 18th, giving us 3 weeks to complete the work. Th
 
 ## **7) Questions for TAs (optional)**
 
-- Should we use other other metrics than the ones from the original paper?
-- Are the 3 methods that we intend to implement enough for the scope of this project?
+- Should we use other metrics than the ones from the original paper?
+- Are the 3 methods that we intend to implement too many or too few for the scope of this project?
 - Is AdaBoost a better choice for boosted trees since it is the most popular?
