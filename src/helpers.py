@@ -5,13 +5,13 @@ def load_data(data_path='../data/', muchlinski_data=True, fl_data=True, ch_data=
     
     data = {}
     # Extract features used in each paper from notes.txt 
-    with open(DATA_PATH+'notes.txt') as f:
+    with open(data_path+'notes.txt') as f:
 
         task_notes = f.readlines()
         task_notes = ''.join(task_notes)
 
     # load data
-    master_data = pd.read_csv(DATA_PATH+'SambnisImp.csv', index_col='X')
+    master_data = pd.read_csv(data_path+'SambnisImp.csv', index_col='X')
 
     # retrieve y
     y_master = master_data['warstds']
