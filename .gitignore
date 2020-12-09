@@ -2,3 +2,5 @@
 src/__pycache__/helpers.cpython-37.pyc
 src/.ipynb_checkpoints/FeatureSelection-checkpoint.ipynb
 src/.ipynb_checkpoints/SVM-checkpoint.ipynb
+.ipynb_checkpoints
+
