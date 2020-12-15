@@ -6,6 +6,7 @@ from sklearn import ensemble, pipeline, model_selection, metrics, preprocessing,
 from tensorflow import keras
 import tensorflow as tf
 import seaborn as sns
+import pickle
 
 def load_data(data_path='../data/', muchlinski_data=True, fl_data=True, ch_data=True, hs_data=True):
     data = {}
@@ -63,6 +64,25 @@ def perform_gridsearch_cv(X, y, param_grid, pipe, k_folds, scoring, pkl_out, n_j
 
     sorted_gs_res.to_pickle(pkl_out)
 
+def get_params(method, PICKLE_PATH):
+    file = "gs_rocauc_" + method +"_all.pkl"
+    with open(PICKLE_PATH + file, "rb") as f:
+        params = pickle.load(f)
+        params = params.drop('roc_auc',axis=1).iloc[0].to_dict()
+    if method == "svm" and np.isnan(params["degree"]):
+        params["degree"] = 1
+    if "n_estimators" in params:
+        params["n_estimators"] = int(params["n_estimators"])
+    return params
+
+def save_pkl(object_, file, PICKLE_PATH):
+    with open(PICKLE_PATH + file + ".pkl", "wb") as f:
+        pickle.dump(object_, f, pickle.HIGHEST_PROTOCOL)
+        
+def load_pkl(file, PICKLE_PATH, df=True):
+    with open(PICKLE_PATH + file + ".pkl", "rb") as f:
+        pkl_obj = pd.DataFrame(pickle.load(f)) if df else pickle.load(f)
+    return pkl_obj    
 
 def roc_plt(X, y, pipe, title, k_fold=5, seed=0, create_plot=True):
     # set seed and ensure input are numpy arrays
