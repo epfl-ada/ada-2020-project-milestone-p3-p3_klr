@@ -9,6 +9,23 @@ import seaborn as sns
 import pickle
 
 def load_data(data_path='../data/', muchlinski_data=True, fl_data=True, ch_data=True, hs_data=True):
+    """
+    Function which loads data used by muchlinski, requires
+    SambnisImp.csv available here https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/KRKWK8&version=1.0
+    and notes.txt to be inside specified data_path, specifying paper variables employed
+    ----------
+    :param data_path: str
+        directory in which SambnisImp.csv and notes.txt are placed
+    :param muchlinski_data: bool
+        whether to load Muchlinski features
+    :param fl_data: bool
+        whether to load Fearon and Laitin (2003) features
+    :param ch_data: bool
+        whether to load Collier and Hoeffler (2004) features
+    :param hs_data: bool
+        whether to load Hegre and Sambanis (2006) features
+    :return: dictionary with desired (feature,labels) tuples
+    """
     data = {}
     # Extract features used in each paper from notes.txt 
     with open(data_path + 'notes.txt') as f:
@@ -50,6 +67,24 @@ def load_data(data_path='../data/', muchlinski_data=True, fl_data=True, ch_data=
 
 
 def perform_gridsearch_cv(X, y, param_grid, pipe, k_folds, scoring, pkl_out, n_jobs, clss_w=None):
+    """
+    Performs grid search with sklearn's grid_search_cv and sorts results by scoring method
+    ----------
+    :param X: numpy array or pandas dataframe
+    :param y: numpy array or pandas serie
+    :param param_grid: dictionary or list of dictionary to perform grid search upon, must be assignable to pipeline steps
+    :param pipe: sklearn pipe with steps
+    :param k_folds: sklearn cv acceptable parameters, integers or folds object
+    :param scoring: str 
+        scoring method acceptable by sklearn gridsearchcv
+    :param pkl_out: str
+        pickle filename including path for output
+    :param n_jobs: int
+        number of parallel processes to run
+    :param clss_w: dict default None
+        weights to assign to each class example {0: weight_for_0, 1: weight_for_1} 
+    :return: None, saved pickle of results 
+    """
     grid_search = model_selection.GridSearchCV(pipe, param_grid, cv=k_folds, scoring=scoring, verbose=1, n_jobs=n_jobs)
     if clss_w is not None:
         grid_search.fit(X, y, clf__class_weight=clss_w)
@@ -65,6 +100,15 @@ def perform_gridsearch_cv(X, y, param_grid, pipe, k_folds, scoring, pkl_out, n_j
     sorted_gs_res.to_pickle(pkl_out)
 
 def get_params(method, PICKLE_PATH):
+    """
+    Loads pickles of results and retrieves hyperparameters
+    ----------
+    :param method: str
+        method which parameters would like to be retrieved for
+    :param PICKLE_PATH: str
+        directory to path containing pickle files, naming convention imposed gs_rocauc_ + method + "_all.pkl"
+    :return: dictionary including hyperparameters
+    """
     file = "gs_rocauc_" + method +"_all.pkl"
     with open(PICKLE_PATH + file, "rb") as f:
         params = pickle.load(f)
@@ -76,15 +120,38 @@ def get_params(method, PICKLE_PATH):
     return params
 
 def save_pkl(object_, file, PICKLE_PATH):
+    """
+    Saves Object in pickle at target PICKLE_PATH+file
+    """
     with open(PICKLE_PATH + file + ".pkl", "wb") as f:
         pickle.dump(object_, f, pickle.HIGHEST_PROTOCOL)
         
 def load_pkl(file, PICKLE_PATH, df=True):
+    """
+    Loads Object from pickle at target PICKLE_PATH+file
+    :param df: bool
+        whether to return as dataframe or original format
+    """
     with open(PICKLE_PATH + file + ".pkl", "rb") as f:
         pkl_obj = pd.DataFrame(pickle.load(f)) if df else pickle.load(f)
     return pkl_obj    
 
 def roc_plt(X, y, pipe, title, k_fold=5, seed=0, create_plot=True):
+    """
+    Creates RocAuc Curve for given pipe and plots it if desired
+    ----------
+    :param X: numpy array or pandas dataframe
+    :param y: numpy array or pandas serie
+    :param pipe: sklearn pipe with steps
+    :param title: str
+        title to put in plot
+    :param k_folds: sklearn cv acceptable parameters, integers or folds object, default 5 folds        
+    :param seed: int
+        seed for reprodubility, default 0
+    :param create_plot: bool
+        whether to plot or not
+    :return: dictionary containing mean RocAuc values over the folds
+    """
     # set seed and ensure input are numpy arrays
     np.random.seed(seed)
     X, y = X.to_numpy(), y.to_numpy()
