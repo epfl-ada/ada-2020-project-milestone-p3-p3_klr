@@ -1,5 +1,7 @@
 # **Milestone P3: Team KLR**
 
+The blog presenting the resulting work may be found [here](https://kamransattary.github.io/ADA_P4_Blog/), and its associated repo [here](https://github.com/KamranSattary/ADA_P4_Blog)
+
 ## **1) Title** : Extending the comparison of classification models for rare civil war onsets
 
 
